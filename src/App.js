@@ -8,6 +8,11 @@ class App extends Component {
 
   state = {images};
 
+  removeImage = id => {
+    const newImageArray = this.state.images.filter(image => !(image.id === id))
+    this.setState({images: newImageArray});
+  }
+
   render() {
     return (
       <Wrapper>
