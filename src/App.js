@@ -8,7 +8,7 @@ import './App.css';
 
 class App extends Component {
 
-  // Set the state and default values of game start
+  // Set the state with images.json object and default values of game start
   state = {
     images,
     score: 0,
@@ -24,12 +24,37 @@ class App extends Component {
     this.setState({ score: 0 });
     // reset each image's clicked counter back to 0
     this.state.images.forEach(image => { image.counter = 0 })
-    return
+    // Do I even need to return anything?
+  };
+
+  // Function to shuffle the order of the images
+  shuffleImages = array => {
+    for (var i = array.length; i > 0; i--) {
+      var randomIndex = Math.floor(Math.random() * i);
+      // store array the current index's value temporarily
+      var tempValue = array[i];
+      // switch out randomIndex's value to current index's value
+      array[i] = array[randomIndex];
+      // change randomIndex's value to tempValue
+      array[randomIndex] = tempValue;
+    }
+    return array;
   }
 
+  // Function to add a count to a clicked image and shuffle, or call restartGame if counter is already 1
   countImage = id => {
-    const newImageArray = this.state.images.filter(image => !(image.id === id))
-    this.setState({ images: newImageArray });
+    console.log("You've clicked an image")
+    // If the counter of the clicked image is still 0
+    if (this.state.images[id] === 0) {
+      // add a point to the score
+      this.setState({ score: (this.state.score + 1) })
+    } else { // Otherwise restart the game because counter was already at 1
+      this.restartGame()
+    }
+
+    // shuffle the array and re-render
+    this.shuffleImages(this.state.images);
+    return true;
   }
 
   render() {
@@ -37,18 +62,14 @@ class App extends Component {
       <div className="container">
         <Navbar score={this.state.score} topscore={this.state.topscore}></Navbar>
         <Header></Header>
-        <Wrapper>
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12 text-center">
-                <h1 className="title">Alphabet Image List</h1>
-              </div>
-            </div>
-            <div className="row">
-              {this.state.images.map(images => (<ImageCard images={images}
-                countImage={this.countImage} />))}
-            </div>
+        <div className="row">
+          <div className="col-md-12 text-center">
+            <h1 className="title">Alphabet Images</h1>
           </div>
+        </div>
+        <Wrapper>
+          {this.state.images.map(images => (<ImageCard image={images.image}
+            countImage={this.countImage} id={images.id} key={images.id} />))}
         </Wrapper >
       </div>
     );

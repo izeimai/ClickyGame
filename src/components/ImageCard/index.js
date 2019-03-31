@@ -3,9 +3,9 @@ import "./style.css"
 
 function ImageCard(props) {
     return (
-        <span className="count" onClick={() => props.images.countImage(props.images.id)}>
+        <span className="image" onClick={() => props.countImage(props.id)}>
             <div className="img-container text-center">
-                <img alt={props.name} src={props.images.image} />
+                <img src={props.image} alt={props.name} />
             </div>
         </span>
     );
