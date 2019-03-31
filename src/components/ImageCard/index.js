@@ -3,13 +3,11 @@ import "./style.css"
 
 function ImageCard(props) {
     return (
-        <div className="card">
-        <span className="remove" onClick={() => props.images.removeImage(props.images.id)}>
-            <div className="img-container">
+        <span className="count" onClick={() => props.images.countImage(props.images.id)}>
+            <div className="img-container text-center">
                 <img alt={props.name} src={props.images.image} />
             </div>
-            </span>
-        </div>
+        </span>
     );
 }
 
