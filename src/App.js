@@ -10,7 +10,7 @@ class App extends Component {
 
   // Set the state with images.json object and default values of game start
   state = {
-    images,
+    images: images,
     score: 0,
     topscore: 0
   };
@@ -25,11 +25,12 @@ class App extends Component {
     // reset each image's clicked counter back to 0
     this.state.images.forEach(image => { image.counter = 0 })
     // Do I even need to return anything?
+    return true;
   };
 
   // Function to shuffle the order of the images
   shuffleImages = array => {
-    for (var i = array.length; i > 0; i--) {
+    for (var i = array.length - 1; i > 0; i--) {
       var randomIndex = Math.floor(Math.random() * i);
       // store array the current index's value temporarily
       var tempValue = array[i];
@@ -43,21 +44,26 @@ class App extends Component {
 
   // Function to add a count to a clicked image and shuffle, or call restartGame if counter is already 1
   countImage = id => {
-    console.log("You've clicked an image")
+    console.log("You've clicked an image");
     // If the counter of the clicked image is still 0
-    if (this.state.images[id] === 0) {
+    if (this.state.images[id].counter === 0) {
       // add a point to the score
-      this.setState({ score: (this.state.score + 1) })
+      this.setState({ score: (this.state.score + 1) });
+      // add a point to the counter of the matching object in array 'images'
+      this.state.images[id].counter = 1;
+      // shuffle the array and re-render
+      this.shuffleImages(this.state.images);
     } else { // Otherwise restart the game because counter was already at 1
-      this.restartGame()
+      this.restartGame();
     }
 
-    // shuffle the array and re-render
-    this.shuffleImages(this.state.images);
-    return true;
+
+    //return true;
   }
 
   render() {
+    // check the array
+    console.log(this.state.images);
     return (
       <div className="container">
         <Navbar score={this.state.score} topscore={this.state.topscore}></Navbar>
