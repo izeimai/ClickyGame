@@ -44,13 +44,30 @@ class App extends Component {
 
   // Function to add a count to a clicked image and shuffle, or call restartGame if counter is already 1
   countImage = id => {
-    console.log("You've clicked an image");
-    // If the counter of the clicked image is still 0
-    if (this.state.images[id].counter === 0) {
-      // add a point to the score
-      this.setState({ score: (this.state.score + 1) });
-      // add a point to the counter of the matching object in array 'images'
-      this.state.images[id].counter = 1;
+    // empty variable to store image selected
+    let selectedImage;
+    // loop through the array of images
+    for (let i = 0; i < this.state.images.length; i++) {
+      // to find the image with the matching id that was clicked
+      if (this.state.images[i].id === id) {
+        // then store that image as the selected image
+        selectedImage = this.state.images[i];
+      }
+    }
+    // If the counter of the selected image is still 0
+    if (selectedImage.counter !== 1) {
+      // store the new score in a variable
+      let currScore = this.state.score + 1;
+      // set the state of score to the new score
+      this.setState({ score: currScore });
+      // if the score is greater than the top score, then set the top score
+      if (this.state.topscore <= currScore) {
+        this.setState({ topscore: currScore });
+      }
+
+      // Add 1 to the counter of that selected image
+      selectedImage.counter = 1;
+
       // shuffle the array and re-render
       this.shuffleImages(this.state.images);
     } else { // Otherwise restart the game because counter was already at 1

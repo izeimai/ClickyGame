@@ -1,72 +1,72 @@
 [
     {
-      "id": 1,
+      "id": 0,
       "name": "a",
       "image": "/img/a.png",
       "counter": 0
     },
     {
-        "id": 2,
+        "id": 1,
         "name": "b",
         "image": "/img/b.png",
         "counter": 0
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "c",
       "image": "/img/c.png",
       "counter": 0
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "d",
       "image": "/img/d.png",
       "counter": 0
     },
     {
-      "id": 5,
+      "id": 4,
       "name": "e",
       "image": "/img/e.png",
       "counter": 0
     },
     {
-      "id": 6,
+      "id": 5,
       "name": "f",
       "image": "/img/f.png",
       "counter": 0
     },
     {
-      "id": 7,
+      "id": 6,
       "name": "g",
       "image": "/img/g.png",
       "counter": 0
     },
     {
-      "id": 8,
+      "id": 7,
       "name": "h",
       "image": "/img/h.png",
       "counter": 0
     },
     {
-      "id": 9,
+      "id": 8,
       "name": "i",
       "image": "/img/i.png",
       "counter": 0
     },
     {
-      "id": 10,
+      "id": 9,
       "name": "j",
       "image": "/img/j.png",
       "counter": 0
     },
     {
-      "id": 11,
+      "id": 10,
       "name": "k",
       "image": "/img/k.png",
       "counter": 0
     },
     {
-      "id": 12,
+      "id": 11,
       "name": "l",
       "image": "/img/l.png",
       "counter": 0
