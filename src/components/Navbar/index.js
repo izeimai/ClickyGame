@@ -5,7 +5,7 @@ function Navbar(props) {
     return (
         <div className="navbar">
             <h3>
-                <a href="/">ClickyGame</a>
+                <a href="/clickygame">ClickyGame</a>
             </h3>
             <div className="scores">
                 <h3>
