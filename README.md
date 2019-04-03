@@ -7,11 +7,11 @@ The user is presented with a screen with twelve images (in my app, these are scr
 Technologies used:
 * React = JavaScript library for building user interface
 * Node = JavaScript runtime environment
-* npm = package manager for Node
+* npm = package manager for Node, in particular 'create-react-app'
 
 
 How is this app useful?
-React is the front-end JavaScript library du jour so it is advantageous from a employability perspective to now the latest and most popular technologies. It was helpful to learn how the folder structure works within React. For this app, there is a images.json file that holds an array of objects with information about each image that will be displayed on the page. Each of these 12 images have an id, name and file path (which leads back to the public/img folder). This array as well as each of the other components (Header, NavBar, Wrapper and ImageCard) are all imported into the App.js file where they are rendered.
+React is the front-end JavaScript library du jour so it is advantageous from a employability perspective to know the latest and most popular technologies. It was helpful to learn how the folder structure works within React. For this app, there is a images.json file that holds an array of objects with information about each image that will be displayed on the page. Each of these 12 images have an id, name and file path (which leads back to the public/img folder). This array as well as each of the other components (Header, NavBar, Wrapper and ImageCard) are all imported into the App.js file where they are rendered.
 
 
 What was challenging while building this app?
