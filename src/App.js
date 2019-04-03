@@ -79,8 +79,6 @@ class App extends Component {
   }
 
   render() {
-    // check the array
-    console.log(this.state.images);
     return (
       <div className="container">
         <Navbar score={this.state.score} topscore={this.state.topscore}></Navbar>
