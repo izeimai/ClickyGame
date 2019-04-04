@@ -2,73 +2,73 @@
     {
       "id": 0,
       "name": "a",
-      "image": "/img/a.PNG",
+      "image": "/public/img/a.PNG",
       "counter": 0
     },
     {
         "id": 1,
         "name": "b",
-        "image": "/img/b.PNG",
+        "image": "/public/img/b.PNG",
         "counter": 0
     },
     {
       "id": 2,
       "name": "c",
-      "image": "/img/c.PNG",
+      "image": "/public/img/c.PNG",
       "counter": 0
     },
     {
       "id": 3,
       "name": "d",
-      "image": "/img/d.PNG",
+      "image": "/public/img/d.PNG",
       "counter": 0
     },
     {
       "id": 4,
       "name": "e",
-      "image": "/img/e.PNG",
+      "image": "/public/img/e.PNG",
       "counter": 0
     },
     {
       "id": 5,
       "name": "f",
-      "image": "/img/f.PNG",
+      "image": "/public/img/f.PNG",
       "counter": 0
     },
     {
       "id": 6,
       "name": "g",
-      "image": "/img/g.PNG",
+      "image": "/public/img/g.PNG",
       "counter": 0
     },
     {
       "id": 7,
       "name": "h",
-      "image": "/img/h.PNG",
+      "image": "/public/img/h.PNG",
       "counter": 0
     },
     {
       "id": 8,
       "name": "i",
-      "image": "/img/i.PNG",
+      "image": "/public/img/i.PNG",
       "counter": 0
     },
     {
       "id": 9,
       "name": "j",
-      "image": "/img/j.PNG",
+      "image": "/public/img/j.PNG",
       "counter": 0
     },
     {
       "id": 10,
       "name": "k",
-      "image": "/img/k.PNG",
+      "image": "/public/img/k.PNG",
       "counter": 0
     },
     {
       "id": 11,
       "name": "l",
-      "image": "/img/l.PNG",
+      "image": "/public/img/l.PNG",
       "counter": 0
     }
   ]
